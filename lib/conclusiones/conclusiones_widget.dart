@@ -43,9 +43,9 @@ class _ConclusionesWidgetState extends State<ConclusionesWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
                 child: Container(
                   width: double.infinity,
-                  height: MediaQuery.of(context).size.height * 1,
                   decoration: BoxDecoration(
                     color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
                   ),
                   child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
@@ -109,32 +109,35 @@ class _ConclusionesWidgetState extends State<ConclusionesWidget> {
                             ),
                           ),
                         ),
-                        Material(
-                          color: Colors.transparent,
-                          elevation: 5,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Container(
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                          child: Material(
+                            color: Colors.transparent,
+                            elevation: 5,
+                            shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
                             ),
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  10, 10, 10, 10),
-                              child: Text(
-                                'En conclusión FlutterFlow es un aplicación online de desarrollo, que nos permite crear aplicaciones nativas funcionales, el desarrollo es a través de componentes los cuales ya están fabricados, por lo que solo los debemos arrastrar a nuestra página que estamos editando. Esto nos permite hacer proyectos rápidamente puesto que no trabajamos con código o creamos componentes, sino que los editamos buscando obtener el resultado que deseamos. ',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'Poppins',
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryText,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500,
-                                    ),
+                            child: Container(
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    10, 10, 10, 10),
+                                child: Text(
+                                  'En conclusión FlutterFlow es un aplicación online de desarrollo, que nos permite crear aplicaciones nativas funcionales, el desarrollo es a través de componentes los cuales ya están fabricados, por lo que solo los debemos arrastrar a nuestra página que estamos editando. Esto nos permite hacer proyectos rápidamente puesto que no trabajamos con código o creamos componentes, sino que los editamos buscando obtener el resultado que deseamos. ',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'Poppins',
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                ),
                               ),
                             ),
                           ),

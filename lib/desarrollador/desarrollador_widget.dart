@@ -69,7 +69,6 @@ class _DesarrolladorWidgetState extends State<DesarrolladorWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
               child: Container(
                 width: double.infinity,
-                height: MediaQuery.of(context).size.height * 1,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
@@ -80,69 +79,72 @@ class _DesarrolladorWidgetState extends State<DesarrolladorWidget> {
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Container(
-                            width: 120,
-                            height: 120,
-                            clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Container(
+                              width: 120,
+                              height: 120,
+                              clipBehavior: Clip.antiAlias,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
+                              child: Image.network(
+                                'https://lh3.googleusercontent.com/31moWVB1VzWGMLyBIEkrT6oYm1aA7fdik22Bz4AQXBWlPAIGJkqUTktmsIjc9YlSGojs5Y8sKuNxOZ04R-aPBYy76P4p1GUeT75oliz6UVnE4RFKbXU_Vkd4Mk201hadX7d26Iz_qYbYp3uqazhQaVTQUJF9d8AC67bVvSb2zV7-NFIFNUgCs1qFElnYIMTJDEPHfoQx15ppIxY5jJL7rpqOH4SHC_8rHOOn-xEzdVLqNBxxysAZ6DopQXVZXvA2CiOKZW5iahOvskWJOwnK9GALB8PHGryyql-uN1e5u0ZrOAMHTMIkxazxNdeuMHPXpcOQ-AHyBxwjcq0WoRHMdxPAdfYMn9iL8uR-AUmhbZoTx9QuYx6OMZqhztwGWLBYFCMCtmd4kANem88vRAu_FO7S7pVVTDgXRIrbbEDhITtW_ex3_ucninJHk5NWSh-gba_T8o9SYSK53MwA4_J2NLUeN5gkNfgIK9OEqztVX8PmLL8-V7WkEp4W06rH81TYqRw8xCaqdE1r0wAnkcpjAzW9IhfifS-2h5KXxhGQ0ok0NGsC6Zi_knnV-a65YgF0xE-EYxznOMmdkY-8pog3x5iSTUaTp0wOcRqDxjdEZN7s-uJ1_vcBBIUNeab3fFVbv77awxKWBJw_GlPPNVyvQwHcZqZ9tKmMO8KZKdtzu2TRBV98BeGp_kiyRRcqlnrQAbMKFM80i6Km6lrRJvs_Td51kqk-brVHLqAZTiLQJD06dT_SCf4LC7B5JWc2=w433-h577-no?authuser=0',
+                                fit: BoxFit.cover,
+                              ),
                             ),
-                            child: Image.network(
-                              'https://lh3.googleusercontent.com/31moWVB1VzWGMLyBIEkrT6oYm1aA7fdik22Bz4AQXBWlPAIGJkqUTktmsIjc9YlSGojs5Y8sKuNxOZ04R-aPBYy76P4p1GUeT75oliz6UVnE4RFKbXU_Vkd4Mk201hadX7d26Iz_qYbYp3uqazhQaVTQUJF9d8AC67bVvSb2zV7-NFIFNUgCs1qFElnYIMTJDEPHfoQx15ppIxY5jJL7rpqOH4SHC_8rHOOn-xEzdVLqNBxxysAZ6DopQXVZXvA2CiOKZW5iahOvskWJOwnK9GALB8PHGryyql-uN1e5u0ZrOAMHTMIkxazxNdeuMHPXpcOQ-AHyBxwjcq0WoRHMdxPAdfYMn9iL8uR-AUmhbZoTx9QuYx6OMZqhztwGWLBYFCMCtmd4kANem88vRAu_FO7S7pVVTDgXRIrbbEDhITtW_ex3_ucninJHk5NWSh-gba_T8o9SYSK53MwA4_J2NLUeN5gkNfgIK9OEqztVX8PmLL8-V7WkEp4W06rH81TYqRw8xCaqdE1r0wAnkcpjAzW9IhfifS-2h5KXxhGQ0ok0NGsC6Zi_knnV-a65YgF0xE-EYxznOMmdkY-8pog3x5iSTUaTp0wOcRqDxjdEZN7s-uJ1_vcBBIUNeab3fFVbv77awxKWBJw_GlPPNVyvQwHcZqZ9tKmMO8KZKdtzu2TRBV98BeGp_kiyRRcqlnrQAbMKFM80i6Km6lrRJvs_Td51kqk-brVHLqAZTiLQJD06dT_SCf4LC7B5JWc2=w433-h577-no?authuser=0',
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          Expanded(
-                            child: Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(5, 0, 10, 0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Desarrollado por, ',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Poppins',
-                                          color: Color(0xFF333131),
-                                          fontSize: 18,
-                                        ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 5, 0, 5),
-                                    child: Text(
-                                      'Pablo Lopez Edgar',
+                            Expanded(
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(5, 0, 10, 0),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Desarrollado por, ',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyText1
                                           .override(
                                             fontFamily: 'Poppins',
-                                            color: Color(0xFF04D9C4),
+                                            color: Color(0xFF333131),
                                             fontSize: 18,
-                                            fontWeight: FontWeight.bold,
                                           ),
                                     ),
-                                  ),
-                                  Text(
-                                    'Centro de Bachillerato Tecnológico \nIndustrial y de Servicios No. 128',
-                                    textAlign: TextAlign.start,
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Poppins',
-                                          color: Color(0xFF696565),
-                                        ),
-                                  ),
-                                ],
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 5, 0, 5),
+                                      child: Text(
+                                        'Pablo Lopez Edgar',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Poppins',
+                                              color: Color(0xFF04D9C4),
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                      ),
+                                    ),
+                                    Text(
+                                      'Centro de Bachillerato Tecnológico \nIndustrial y de Servicios No. 128',
+                                      textAlign: TextAlign.start,
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Poppins',
+                                            color: Color(0xFF696565),
+                                          ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 10),
@@ -351,7 +353,7 @@ class _DesarrolladorWidgetState extends State<DesarrolladorWidget> {
                             ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 20),
                         child: FFButtonWidget(
                           onPressed: () async {
                             await Navigator.push(
